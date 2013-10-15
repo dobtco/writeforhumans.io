@@ -9,7 +9,6 @@ writer.controller 'MainCtrl', ($scope) ->
 	$scope.check = (e) ->
     # Only recalculate when hitting the 'space' or 'return' keys
     if e.keyCode in [32, 13]
-      console.log e.keyCode
       ts = textstatistics($scope.pad)
       $scope.readability = ts.readingEase()
       $scope.bigWords = ts.bigWords();
