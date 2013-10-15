@@ -11,6 +11,7 @@ writer.controller 'MainCtrl', ($scope) ->
       ts = textstatistics($scope.pad)
       $scope.readability = ts.readingEase()
       $scope.bigWords = ts.bigWords();
+      $scope.averageWordsPerSentence = ts.averageWordsPerSentence();
 
 
 writer.directive "readability", ->
