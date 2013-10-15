@@ -5,7 +5,7 @@ writer.controller 'MainCtrl', ($scope) ->
 	$scope.pad = ""
 	pad = $scope.pad
 	stats = {}
-	$scope.readability = 999
+	$scope.readability = 100
 	$scope.check = (e) ->
     # Only recalculate when hitting the 'space' or 'return' keys
     if e.keyCode in [32, 13]
