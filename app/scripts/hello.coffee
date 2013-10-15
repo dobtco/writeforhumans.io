@@ -4,7 +4,6 @@ writer.module
 writer.controller 'MainCtrl', ($scope) ->
 	$scope.pad = ""
 	pad = $scope.pad
-	stats = {}
 	$scope.readability = 100
 	$scope.check = (e) ->
     # Only recalculate when hitting the 'space' or 'return' keys
