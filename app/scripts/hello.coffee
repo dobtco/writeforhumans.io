@@ -2,7 +2,7 @@ writer = angular.module('writer',[])
 writer.module
 
 writer.controller 'MainCtrl', ($scope) ->
-	$scope.pad = "Just start typing over here!"
+	$scope.pad = ""
 	pad = $scope.pad
 	stats = {}
 	$scope.readability = 999
