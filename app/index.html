@@ -42,9 +42,12 @@
 
             <div class="row">
                 <div class="col-xs-2">
-                    <div class="happycons" readability="{{readability}}">&#xe00f;</div>
+                    <div class='face-wrapper'>
+                        <div class="happycons" readability="{{readability}}">&#xe00f;</div>
+                        <div class='readability-score'>{{readability}}</div>
+                    </div>
                     <div ng-show="bigWords.bigWords">
-                    <h4>Big Words</h4>
+                        <h4>Big Words</h4>
                         <div ng-repeat="word in bigWords.bigWords">
                             <li class="problemword">{{word}}</li>
                         </div>
@@ -55,15 +58,20 @@
                             <li class="problemword">{{word}}</li>
                         </div>
                     </div>
+                    <div ng-show='averageWordsPerSentence'>
+                        <h4>Words per sentence</h4>
+                        <div>{{averageWordsPerSentence}}</div>
+                    </div>
                 </div>
                 <div class="col-xs-10">
                     <div class="editor">
-                        <textarea id="texteditor" class="pad" ng-keydown="check($event)" ng-model="pad"></textarea>
+                        <textarea id="texteditor" class="pad" ng-keydown="check($event)" ng-model="pad"
+                                  placeholder='Just start typing over here!'></textarea>
                     </div>
                 </div>
             </div>
 
-        
+
 
 
 
