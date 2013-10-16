@@ -93,8 +93,10 @@
 					}
 				}
 				if (word.match(/\w+ly/)) {
-					if(adverbs.indexOf(word) === -1) {
-						adverbs.push(word);
+					if(exceptions.indexOf(word) === -1){
+						if(adverbs.indexOf(word) === -1) {
+							adverbs.push(word);
+						}	
 					}
 				}
 			//}
