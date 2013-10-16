@@ -1,5 +1,9 @@
+console.log 'Listen, the code is probably crap by your standards. But our CEO wrote it, not our \
+             engineering team. So give us a break. And hey, think you can do better? We are hiring. \
+             hello@dobt.co'
+
 writer = angular.module('writer',[])
-writer.module 
+writer.module
 
 writer.controller 'MainCtrl', ($scope) ->
 	$scope.pad = "Just start typing over here!"
@@ -12,7 +16,7 @@ writer.controller 'MainCtrl', ($scope) ->
 				$scope.readability = ts.readingEase()
 				$scope.bigWords = ts.bigWords();
 
-		
+
 writer.directive "readability", ->
   ($scope, element, attrs) ->
       attrs.$observe 'readability', (value) ->
