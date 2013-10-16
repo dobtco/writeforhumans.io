@@ -1,0 +1,112 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>writeforhumans</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+                        <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.5/angular.min.js"></script>
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300,100|Open+Sans:700,300,600' rel='stylesheet' type='text/css'>
+        <script src="scripts/textstatistics.js"></script>
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js(.tmp) scripts/coffee.js -->
+        <script src="scripts/hello.js"></script>
+        <!-- endbuild -->
+    </head>
+    <body ng-app="writer">
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+        <div class="container" ng-controller="MainCtrl">
+        <!--
+            <div class="header">
+                <ul class="nav nav-pills pull-right">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <h3 class="text-muted">writeforhumans</h3>
+            </div>
+        -->
+
+            <div class="row">
+                <div class="col-xs-2">
+                    <div class='face-wrapper'>
+                        <div class="happycons" readability="{{readability}}">&#xe00f;</div>
+                       
+                    </div>
+                    <div ng-show="bigWords.bigWords">
+                        <h4>Big Words</h4>
+                        <div ng-repeat="word in bigWords.bigWords">
+                            <li class="problemword">{{word}}</li>
+                        </div>
+                    </div>
+                    <div ng-show="bigWords.adverbs">
+                        <h4>Adverbs</h4>
+                        <div ng-repeat="word in bigWords.adverbs">
+                            <li class="problemword">{{word}}</li>
+                        </div>
+                    </div>
+                    <div ng-show='averageWordsPerSentence'>
+                        <h4>Words per sentence</h4>
+                        <div>{{averageWordsPerSentence}}</div>
+                    </div>
+                </div>
+                <div class="col-xs-10">
+                    <div class="editor">
+                        <textarea id="texteditor" class="pad" ng-keydown="check($event)" ng-model="pad"
+                                  placeholder='Just start typing over here!'></textarea>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="footer">
+                <p>♥ from the <a href="http://dobt.co">Department of Better Technology</a></p>
+            </div>
+
+        </div>
+
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+
+        <!-- build:js scripts/main.js -->
+
+        <!-- endbuild -->
+
+        <!-- build:js scripts/plugins.js -->
+
+        <!-- endbuild -->
+
+
+</body>
+</html>
