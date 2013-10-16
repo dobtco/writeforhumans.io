@@ -1,4 +1,4 @@
-// Generated on 2013-10-08 using generator-webapp 0.4.2
+// Generated on 2013-09-11 using generator-webapp 0.4.2
 'use strict';
 
 // # Globbing
@@ -95,6 +95,7 @@ module.exports = function (grunt) {
             },
             server: '.tmp'
         },
+
         jshint: {
             options: {
                 jshintrc: '.jshintrc'
@@ -120,7 +121,7 @@ module.exports = function (grunt) {
                     expand: true,
                     cwd: '<%= yeoman.app %>/scripts',
                     src: '{,*/}*.coffee',
-                    dest: '.tmp/scripts',
+                    dest: '<%= yeoman.app %>/scripts',
                     ext: '.js'
                 }]
             },
@@ -168,7 +169,7 @@ module.exports = function (grunt) {
                     expand: true,
                     cwd: '.tmp/styles/',
                     src: '{,*/}*.css',
-                    dest: '.tmp/styles/'
+                    dest: '<%= yeoman.app %>/styles/'
                 }]
             }
         },
@@ -283,8 +284,7 @@ module.exports = function (grunt) {
                         '*.{ico,png,txt}',
                         '.htaccess',
                         'images/{,*/}*.{webp,gif}',
-                        'styles/fonts/{,*/}*.*',
-                        'bower_components/sass-bootstrap/fonts/*.*'
+                        'styles/fonts/{,*/}*.*'
                     ]
                 }]
             },
@@ -314,6 +314,14 @@ module.exports = function (grunt) {
                 'svgmin',
                 'htmlmin'
             ]
+        },
+        git_deploy: {
+            dobtco: {
+                options: {
+                    url: 'git@github.com:dobtco/writeforhumans.io.git'
+                },
+                src: 'app/'
+            },
         }
     });
 
