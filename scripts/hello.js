@@ -7,7 +7,7 @@
 
   writer.controller('MainCtrl', function($scope) {
     var pad, stats;
-    $scope.pad = "Just start typing over here!";
+    $scope.pad = "";
     pad = $scope.pad;
     stats = {};
     $scope.readability = 999;
